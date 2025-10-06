@@ -37,7 +37,7 @@ We provide two straightforward ways to verify our results:
 
 **We strongly recommend starting here.** This approach allows you to immediately inspect all key findings from the manuscript without running any simulations.
 
-1.  Navigate to the `Analysis_Package/` directory in the extracted Zenodo archive.
+1.  **Download and extract the `Analysis.zip` file** from the Zenodo archive to a location of your choice.
 2.  **Watch the `Analysis.mp4` video guide.** It provides a complete walkthrough of:
     *   Loading the `analysis-15mw-8ms.cas` file in Fluent.
     *   Visualizing the key flow fields: **velocity, temperature, and humidity**.
@@ -50,9 +50,9 @@ We provide two straightforward ways to verify our results:
 For transparency into our complete simulation setup and execution workflow, we provide a second demonstration.
 
 **Prerequisite Setup for Re-simulation:**
-1.  Navigate to the `Re-simulation/` directory.
-2.  **Extract the Inlet Data:** Locate and extract the `pre-data-1-10000s.zip` archive.
-3.  **Verify Path Consistency (Critical):** The journal files contain predefined paths to read the inlet velocity data. You must ensure that the path to the extracted `pre-data-1-10000s` folder on your system matches the path specified within the journal files. If the paths differ, the simulation will fail to read the necessary inlet conditions.
+1.  **Download and extract the `Re-simulation.zip` file** from the Zenodo archive.
+2.  **Extract the Inlet Data:** Locate and extract the `pre-data-1-2000s.zip` archive.
+3.  **Verify Path Consistency (Critical):** The journal files contain predefined paths to read the inlet velocity data. You must ensure that the path to the extracted `pre-data-1-2000s` folder on your system matches the path specified within the journal files. If the paths differ, the simulation will fail to read the necessary inlet conditions.
 
 **Workflow Demonstration:**
 1.  **Watch the `Resimulation.mp4` video.** It demonstrates the setup and subsequent steps:
