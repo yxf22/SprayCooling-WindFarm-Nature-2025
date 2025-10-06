@@ -25,7 +25,7 @@ To successfully open and interact with the provided case, the following **must b
     > **Critical:** This case and its UDFs were developed **exclusively for Fluent 18.0**. Using a different version will likely cause fatal compatibility issues.
 
 *   **Compiler:** **Microsoft Visual Studio 2010**
-    *   This specific version is **required** to compile the provided User-Defined Functions (UDFs). The UDF source code is included in the `UDF_Source/` directory.
+    *   This specific version is **required** to compile the provided User-Defined Functions (UDFs). The UDF source code is included in the `Analysis.zip` file.
 
 ## 📥 **Usage Instructions**
 
