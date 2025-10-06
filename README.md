@@ -5,7 +5,7 @@ This repository contains the complete simulation files and data for the manuscri
 ## 🚀 **Overview for Reviewers**
 
 We provide the **actual case file and data** used to generate the key results in our manuscript. This allows you to:
-1.  **Immediately inspect the pre-computed results** by opening the case and data files in ANSYS Fluent.
+1.  **Immediately inspect the pre-computed results** by opening the case and data files.
 2.  **Verify all simulation settings**, boundary conditions, and UDF implementations.
 3.  **Re-run the simulation** on a capable machine to fully reproduce the results.
 
@@ -13,62 +13,27 @@ We provide the **actual case file and data** used to generate the key results in
 
 ---
 
-## ⚙️ **Critical System Requirements & Prerequisites**
+## ⚙️ **Prerequisites for Access**
 
-**BEFORE attempting to open the case files, please ensure your system meets the following requirements. Failure to do so will prevent the UDFs from loading.**
+To successfully open and interact with the provided case, the following **must be available on your system**:
 
-*   **Primary CFD Software:** ANSYS Fluent
-*   **Fluent Version:** **18.0**
-    > **Important：** This case and its UDFs were developed and tested **exclusively with Fluent 18.0**. Using a newer version will likely cause compatibility issues and UDF compilation failures.
+*   **CFD Software:** **ANSYS Fluent 18.0**
+    > **Critical:** This case and its UDFs were developed **exclusively for Fluent 18.0**. Using a different version will likely cause fatal compatibility issues.
 
-*   **Mandatory Compiler: Microsoft Visual Studio 2010**
-    *   This specific version is **required** by Fluent 18.0 to correctly compile the provided User-Defined Functions (UDFs).
-    *   **Compatibility Note:** VS2010 is an older product. Please ensure it is installed on a compatible Windows system (e.g., Windows 10).
+*   **Compiler:** **Microsoft Visual Studio 2010**
+    *   This specific version is **required** to compile the provided User-Defined Functions (UDFs). The UDF source code is included in the `UDF_Source/` directory.
 
----
+## 📥 **Usage Instructions**
 
-## 📥 **Installation & Setup Guide**
+### **Primary Method: Inspection of Pre-computed Results**
+1.  Ensure your Fluent 18.0 environment is correctly configured for UDF compilation with Visual Studio 2010. (General guidance on this setup is widely available in ANSYS documentation and online forums.)
+2.  In Fluent, use `File -> Read -> Case and Data...` to load the files from the `Simulation_Files/` directory.
+3.  Upon successful loading and UDF compilation (confirmed by a `"Loaded UDF library libudf"` message in the console), the **converged solution is immediately available** for inspection.
+4.  You can now directly visualize all flow fields and results discussed in the manuscript without any further computation.
 
-### Step 1: Configure the UDF Environment
-
-The most critical step is to set up the compiler path before launching Fluent.
-
-1.  Set the following environment variable in your system:
-    *   Variable name: `VS100COMNTOOLS`
-    *   Variable value: `C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\` (Adjust the drive letter if necessary)
-
-2.  **Recommended Alternative:** The most reliable method is to let Fluent set the path itself:
-    *   Open the **Windows Command Prompt (cmd.exe)** as an administrator.
-    *   Navigate to the `%ANSYS180_DIR%\fluent\ntbin\win64` directory (e.g., `C:\Program Files\ANSYS Inc\v180\fluent\ntbin\win64`).
-    *   Run the command: `fluent18.0.exe -env`
-    *   This will launch Fluent 18.0 with the correct environment variables for UDF compilation.
-
-### Step 2: Load the Case & Compile UDFs
-
-1.  In Fluent, use `File -> Read -> Case and Data...`
-2.  Select the file `Simulation_Files/Full_WindFarm_Simulation.cas` (and the corresponding `.dat` file).
-3.  Fluent will now attempt to compile and load the UDFs. You should see messages in the console:
-    *   `cpp -I...` (This indicates the compiler is running)
-    *   `Finished compilation...`
-    *   `Loaded UDF library libudf` <-- **This message confirms SUCCESS.**
-
-    **Troubleshooting:** If you see an error at this stage, it is almost certainly due to an incorrect Visual Studio 2010 installation or environment path.
-
----
-
-## 🧪 **Instructions for Use & Verification**
-
-### **Option 1: Quick Inspection of Pre-computed Results (STRONGLY RECOMMENDED)**
-*   After successfully loading the case and data, the **fully converged solution is immediately available**.
-*   You can now directly visualize the velocity field, temperature contours, spray particle tracks, and all other results discussed in the manuscript.
-*   This allows for immediate verification of the reported flow physics and quantitative fields without any further computation.
-
-### **Option 2: Full Re-run from Scratch (Optional, Resource-Intensive)**
-*   If you wish to perform a completely independent run, you can initialize the solution and start iterating from zero.
-*   **Computational Note:** A full run from scratch is computationally intensive and is estimated to take **several days to a week** on a high-performance workstation. The provided `.dat` file serves as a fully-converged restart point to save substantial computation time for the review process.
-
-### **UDF Source Code**
-*   The source code for all User-Defined Functions is provided in the `UDF_Source/` directory. You can review this code to understand the custom physics implemented (e.g., droplet injection, phase change models).
+### **Secondary Method: Independent Re-run**
+*   The provided case can also be used to perform a completely independent run from scratch.
+*   **Computational Note:** A full run is resource-intensive and estimated to take **several days to a week** on a high-performance workstation. The provided `.dat` file serves as a fully-converged restart point.
 
 ---
 
