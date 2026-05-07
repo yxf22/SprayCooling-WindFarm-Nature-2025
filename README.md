@@ -77,6 +77,6 @@ In response to reviewer comments, we have added the following supplementary data
   Large‑eddy simulation data for convective boundary layer (CBL) and stable boundary layer (SBL) conditions. Contains power gains and flow field differences used to quantify atmospheric stability effects (see Supplementary Figs. S20–S21).
 
 - **`revision-data-SGS-model-validation.zip`**  
-  Comparison between dynamic Smagorinsky‑Lilly and constant‑coefficient Smagorinsky subgrid‑scale models. Demonstrates <3% difference in wake recovery (see response letter Figure R7).
+  Comparison between dynamic Smagorinsky‑Lilly and constant‑coefficient Smagorinsky subgrid‑scale models (see response letter Figure R7).
 
 All files are provided in native Fluent 18.0 format and can be inspected following the same procedure described in the `Analysis.mp4` video guide.
