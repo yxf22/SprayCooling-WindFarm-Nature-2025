@@ -11,7 +11,7 @@ We provide the **actual case file and data** used to generate the key results in
 
 This repository contains the simulation setup and documentation for our study. The complete dataset, including all large simulation files, is hosted on Zenodo due to its size (>10 GB).
 
-**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.17275486
+**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.20064951
 
 **Please Note:** This is the **full-scale, production-ready case**, not a simplified demo. A typical run requires significant computational resources and time, consistent with the scale of the physics reported in the paper.
 
@@ -37,7 +37,7 @@ We provide two straightforward ways to verify our results:
 
 **We strongly recommend starting here.** This approach allows you to immediately inspect all key findings from the manuscript without running any simulations.
 
-1.  **Download and extract the `Analysis.zip` file** from the Zenodo archive to a location of your choice.**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.17275486
+1.  **Download and extract the `Analysis.zip` file** from the Zenodo archive to a location of your choice.**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.20064951
 2.  **Watch the `Analysis.mp4` video guide.** It provides a complete walkthrough of:
     *   Loading the `analysis-15mw-8ms.cas` file in Fluent.
     *   Visualizing the key flow fields: **velocity, temperature, and humidity**.
@@ -50,7 +50,7 @@ We provide two straightforward ways to verify our results:
 For transparency into our complete simulation setup and execution workflow, we provide a second demonstration.
 
 **Prerequisite Setup for Re-simulation:**
-1.  **Download and extract the `Re-simulation.zip` file** from the Zenodo archive.**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.17275486
+1.  **Download and extract the `Re-simulation.zip` file** from the Zenodo archive.**🔗 Primary Data Download: https://doi.org/10.5281/zenodo.20064951
 2.  **Extract the Inlet Data:** Locate and extract the `pre-data-1-2000s.zip` archive.
 3.  **Verify Path Consistency (Critical):** The journal files contain predefined paths to read the inlet velocity data. You must ensure that the path to the extracted `pre-data-1-2000s` folder on your system matches the path specified within the journal files. If the paths differ, the simulation will fail to read the necessary inlet conditions.
 
@@ -65,7 +65,7 @@ For transparency into our complete simulation setup and execution workflow, we p
 ---
 ## 📦 Updated Data (Revision, Zenodo)
 
-In response to reviewer comments, we have added the following supplementary datasets and validation cases to the Zenodo archive (DOI: 10.5281/zenodo.17275486). These files are not required for the main reproducibility workflow but provide additional verification of the revision:
+In response to reviewer comments, we have added the following supplementary datasets and validation cases to the Zenodo archive (DOI: 10.5281/zenodo.20064951). These files are not required for the main reproducibility workflow but provide additional verification of the revision:
 
 - **`analysis-200kgs-large-area-spray.zip`**  
   Simulation results for the scaled spray case (200 kg/s, expanded coverage) on a 15 MW three‑turbine array. Contains time‑averaged velocity, temperature, and humidity fields used to assess the theoretical upper limit of the method (see Supplementary Section 2.4 and Fig. S30).
