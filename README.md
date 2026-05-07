@@ -63,3 +63,20 @@ For transparency into our complete simulation setup and execution workflow, we p
 
 
 ---
+## 📦 Updated Data (Revision, Zenodo)
+
+In response to reviewer comments, we have added the following supplementary datasets and validation cases to the Zenodo archive (DOI: 10.5281/zenodo.17275486). These files are not required for the main reproducibility workflow but provide additional verification of the revision:
+
+- **`analysis-200kgs-large-area-spray.zip`**  
+  Simulation results for the scaled spray case (200 kg/s, expanded coverage) on a 15 MW three‑turbine array. Contains time‑averaged velocity, temperature, and humidity fields used to assess the theoretical upper limit of the method (see Supplementary Section 2.4 and Fig. S30).
+
+- **`revision-data-mesh-sensitive-validation.zip`**  
+  Grid independence test data for the standard spray case (Case 3). Includes results from coarse, baseline, and fine meshes, confirming the adopted resolution error <2% (see Supplementary Figs. S8–S9).
+
+- **`revision-data-SBL-CBL-analysis.zip`**  
+  Large‑eddy simulation data for convective boundary layer (CBL) and stable boundary layer (SBL) conditions. Contains power gains and flow field differences used to quantify atmospheric stability effects (see Supplementary Figs. S20–S21).
+
+- **`revision-data-SGS-model-validation.zip`**  
+  Comparison between dynamic Smagorinsky‑Lilly and constant‑coefficient Smagorinsky subgrid‑scale models. Demonstrates <3% difference in wake recovery (see response letter Figure R7).
+
+All files are provided in native Fluent 18.0 format and can be inspected following the same procedure described in the `Analysis.mp4` video guide.
