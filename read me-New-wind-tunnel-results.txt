@@ -1,0 +1,41 @@
+Wind-tunnel experiments data for "Water-Spray Cooling of Turbine Wakes..."
+
+1. Overview
+This dataset contains the experimental data for the scaled wind-tunnel tests using a 1:100 NREL 5 MW turbine model.
+Inflow (hub-height) speeds: 3.2 m/s and 4.8 m/s.
+Cooling source: Liquid nitrogen (LN2) injection.
+The LN2 tank capacity is 50 L, and the injection tube length is 2 m.
+
+2. Folder Naming Convention
+Folder names follow the pattern: [U_hub]-[LN2 tank capacity]-[tube length]-[case]
+- U_hub: Hub-height wind speed (3.2 or 4.8 m/s)
+- LN2 tank capacity: 50 L
+- Tube length: 2 m
+- Case: C = cooling (LN2 injection); NC = no cooling (baseline)
+
+3. Folder Descriptions
+- 3.2-50L-2M-C: Data at U_hub = 3.2 m/s, cooling (C) case.
+- 3.2-50L-2M-NC: Data at U_hub = 3.2 m/s, no-cooling (NC) case.
+- 4.8-50L-2M-C: Data at U_hub = 4.8 m/s, cooling (C) case.
+- 4.8-50L-2M-NC: Data at U_hub = 4.8 m/s, no-cooling (NC) case.
+- Uncertainty: Baseline repeatability and uncertainty analysis (three independent no-cooling runs).
+
+4. File Naming and Measurement Heights
+The data files use the following extensions to denote different vertical measurement heights. From highest to lowest:
+- ASA: Highest measurement height (top tip, 1690 mm)
+- ASC: Second highest measurement height (upper hub, 1270 mm)
+- ASB: Second lowest measurement height (lower hub, 850 mm)
+- ASD: Lowest measurement height (bottom tip, 430 mm)
+
+5. Mass Flow Rate Data
+Two Excel files record the LN2 mass flow rate from video analysis:
+- MassFlowRate_20260914_164441.xlsx: U_hub = 3.2 m/s case, initial weight 50.5 kg, duration 36 min.
+- MassFlowRate_20260914_183640.xlsx: U_hub = 4.8 m/s case, initial weight 50 kg, duration 47.5 min.
+Each file contains time series of weight, weight loss per 30 s, and mass flow rate (kg/s and kg/min).
+
+6. File Format
+All wind-tunnel velocity data are provided as .csv files. Each file contains columns for Time (s), Streamwise velocity U (m/s), Vertical velocity W (m/s), and Turbulence intensity Iuu (%).
+
+7. Correspondence
+For questions regarding this dataset, please contact:
+Shengli Chen (shenglichen@sz.tsinghua.edu.cn)
